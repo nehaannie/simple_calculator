@@ -10,13 +10,16 @@ This project is a simple web-based calculator designed to resemble a real calcul
 
 ## Preview
 
-Preview of calculator
+<b>Preview of calculator</b>
+<br>
 ![Calculator Screenshot](cal1.png)
 
-Calculator performing various aritmetic operations
+<b>Calculator performing various aritmetic operations</b>
+<br>
 ![Calculator Screenshot](cal2.png)
 
-Calculator showing the answer of evaluated expression
+<b>Calculator showing the answer of evaluated expression</b>
+<br>
 ![Calculator Screenshot](cal3.png)
 
 ## Usage
