@@ -1,0 +1,131 @@
+<html>
+<title>My calculator</title>
+<head>
+<style>
+
+
+
+        h2{
+          color: white;
+          }
+
+        #main {
+            width: 320px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+            border: 5px solid silver;
+            }
+
+        #calc {
+            width: 100%;
+            height: 60px;
+            font-size: 32px;
+            text-align: right;
+            background-color: white;
+            border-color: black;
+            border-radius: 5px;
+            margin-bottom: 10px;
+           
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            width: 22%;
+            height: 60px;
+            font-size: 24px;
+            margin: 1%;
+            background-color: silver;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            box-shadow: 0 4px #999;
+
+        }
+
+        input[type="button"]:hover {
+            background-color: #bbb;
+        }
+
+        input[type="button"]:active {
+            background-color: #aaa;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+    </style>
+    </style>
+</head>
+
+</style>
+</head>
+<body>
+
+<h2 ><center>My Calculator<center></h2>
+
+    <div id="main">
+        <form name="f">
+            <input type="text" name="box" placeholder="0" id="calc"><br>
+            <input type="button" value="1" onclick="f.box.value+=1">
+            <input type="button" value="2" onclick="f.box.value+=2">
+            <input type="button" value="3" onclick="f.box.value+=3">
+            <input type="button" value="+" onclick="add()">
+            <br>
+            <input type="button" value="4" onclick="f.box.value+=4">
+            <input type="button" value="5" onclick="f.box.value+=5">
+            <input type="button" value="6" onclick="f.box.value+=6">
+            <input type="button" value="-" onclick="sub()">
+            <br>
+            <input type="button" value="7" onclick="f.box.value+=7">
+            <input type="button" value="8" onclick="f.box.value+=8">
+            <input type="button" value="9" onclick="f.box.value+=9">
+            <input type="button" value="/" onclick="div()">
+            <br>
+            <input type="button" value="C" onclick="f.box.value=''">
+            <input type="button" value="0" onclick="f.box.value+=0">
+            <input type="button" value="=" onclick="f.box.value=eval(f.box.value)">
+            <input type="button" value="x" onclick="mul()">
+        </form>
+    </div>
+
+    <script>
+        function add() {
+            var a = f.box.value;
+            var b = a.charAt(a.length - 1);
+            if (b == '+' || b == '-' || b == '*' || b == '/') {
+                f.box.value = a.substring(0, a.length - 1);
+            }
+            f.box.value += '+';
+        }
+
+        function sub() {
+            var a = f.box.value;
+            var b = a.charAt(a.length - 1);
+            if (b == '+' || b == '-' || b == '*' || b == '/') {
+                f.box.value = a.substring(0, a.length - 1);
+            }
+            f.box.value += '-';
+        }
+
+        function mul() {
+            var a = f.box.value;
+            var b = a.charAt(a.length - 1);
+            if (b == '+' || b == '-' || b == '*' || b == '/') {
+                f.box.value = a.substring(0, a.length - 1);
+            }
+            f.box.value += '*';
+        }
+
+        function div() {
+            var a = f.box.value;
+            var b = a.charAt(a.length - 1);
+            if (b == '+' || b == '-' || b == '*' || b == '/') {
+                f.box.value = a.substring(0, a.length - 1);
+            }
+            f.box.value += '/';
+        }
+    </script>
+</body>
+
+</html>
+
